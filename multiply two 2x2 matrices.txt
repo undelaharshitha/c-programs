@@ -1,0 +1,52 @@
+#include<stdio.h>
+int main()
+{
+    int a[2][2],b[2][2],c[2][2],j,i;
+    int c11,c12,c21,c22,a11,a12,a21,a22,b11,b12,b21,b22;
+    printf("enter the array element of first metrix :");
+    for (i=0;i<2;i++)
+    {
+     //printf("\n");
+
+      for (j=0;j<2;j++)
+       scanf("%d",&a[i][j]);
+    }
+    printf("array element metrix is : ");
+
+    for (i=0;i<2;i++)
+    {
+      printf("\n");
+        for (j=0;j<2;j++)
+          printf("%d ",a[i][j]);
+    }
+    printf("\n");
+
+    printf("enter the array of secound metrix :");
+    for (i=0;i<2;i++)
+    {
+     //printf("\n");
+      for (j=0;j<2;j++)
+       scanf("%d",&b[i][j]);
+    }
+    printf("array element metrix is : ");
+    for (i=0;i<2;i++)
+    {
+      printf("\n");
+      for (j=0;j<2;j++)
+       printf("%d ",b[i][j]);
+    }
+
+    c11=((a11*b11)+(a12*b21));
+    c12=((a11*b12)+(a12*b22));
+    c21=((a21*b11)+(a22*b21));
+    c22=((a21*b12)+(a22*b22));
+
+   printf("\nthe multiplication metrix is :");
+    for (i=0;i<2;i++)
+    {
+      printf("\n");
+      for (j=0;j<2;j++)
+       printf("%d ",c[i][j]);
+    }
+    return 0;
+}

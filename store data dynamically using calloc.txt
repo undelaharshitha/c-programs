@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int *p,n,i,k;
+    printf("Enter number of elements to be stored:");
+    scanf("%d",&n);
+    p=(int*)calloc(n,sizeof(int));
+    if(p==NULL){
+        printf("Cannot allocate memory");
+        exit(1);
+    }
+    printf("Enter %d elements:",n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",p+i);
+    }
+    printf("The entered elements are:");
+    for(i=0;i<n;i++){
+        printf("%4d",*(p+i));
+    }
+    printf("\nEnter number of elements you want to extend:");
+    scanf("%d",&k);
+    p=(int*)realloc(p,k*sizeof(int));
+    if(p==NULL){
+        printf("Cannot allocate memory");
+        exit(1);
+    }
+    printf("Enter the next %d elements:",k);
+    for(i=0;i<k;i++)
+    {
+        scanf("%d",(p+n+i));
+    }
+    printf("The entered elements after extending are:");
+    for(i=0;i<n+k;i++){
+        printf("%4d",*(p+i));
+    }
+    free(p);
+    return 0;
+}

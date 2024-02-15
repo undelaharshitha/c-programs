@@ -1,0 +1,32 @@
+A strong number is a number whose sum of factorial of its digits is equal to the number itself.
+#include <stdio.h>
+int fact(int n)
+{  int p=1;
+    while(n!=0)
+    {
+        p=p*n;
+        n=n-1;
+    }
+    return p;
+}
+int main()
+{   int num,r,sum=0,cpy;
+    printf("enter number:");
+    scanf("%d",&num);
+    cpy=num;
+    while(num!=0)
+    {
+        r=num%10;
+        sum=sum+fact(r);
+        num=num/10;
+    }
+    if(cpy==sum)
+    {
+        printf("strong number!!!");
+    }
+    else
+    {
+        printf("not strong number!!!");
+    }
+    return 0;
+}

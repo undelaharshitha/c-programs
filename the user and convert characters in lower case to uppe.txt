@@ -1,0 +1,22 @@
+#include<stdio.h>
+void toggleChar(char*);
+int main()
+{
+    char str[50];
+    printf("Enter the string:");
+    scanf("%[^\n]",str);
+    toggleChar(str);
+    printf("Converted string is: %s",str);
+    return 0;
+}
+void toggleChar(char *ptr_ch){
+    int i;
+    for(i=0;*(ptr_ch+i)!='\0';i++){
+        if(*(ptr_ch+i)>='A' && *(ptr_ch+i)<='Z'){
+            *(ptr_ch+i)=*(ptr_ch+i)+32;
+        }
+        else if(*(ptr_ch+i)>='a' && *(ptr_ch+i)<='z'){
+            *(ptr_ch+i)=*(ptr_ch+i)-32;
+        }
+    }
+}

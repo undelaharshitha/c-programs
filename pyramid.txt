@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(void)
+{
+ int rows,space,num;
+ for(rows=1;rows<=6;rows++)
+ {
+  for(space=1;space<=6-rows;space++)
+   printf(" ");
+  for(num=1;num<=2*rows-1;num++)
+   printf("%d",1);
+ printf("\n");
+ }
+ return 0;
+}

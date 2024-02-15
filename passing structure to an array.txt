@@ -1,0 +1,26 @@
+#include <stdio.h>
+// Define a structure
+struct Person {
+    char name[50];
+    int age;
+};
+// Function that takes a structure array as a parameter
+void printPeople(struct Person people[], int numPeople) {
+    for (int i = 0; i < numPeople; i++) {
+        printf("Person %d\n", i + 1);
+        printf("Name: %s\n", people[i].name);
+        printf("Age: %d\n", people[i].age);
+        printf("\n");
+    }
+}
+int main() {
+ // Declare and initialize a structure array
+    struct Person people[3] = {
+        {"John", 25},
+        {"Alice", 30},
+        {"Bob", 35}
+    };
+// Pass the structure array to the function
+    printPeople(people, 3);
+    return 0;
+}

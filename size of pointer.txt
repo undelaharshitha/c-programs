@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int *p;
+    float *q;
+    double *r;
+    char *ch;
+    //size of the pointers
+    printf("Size of pointer p: %lu\n",sizeof(p));
+    printf("Size of pointer q: %lu\n",sizeof(q));
+    printf("Size of pointer r: %lu\n",sizeof(r));
+    printf("Size of pointer ch: %lu\n",sizeof(ch));
+    //sizes of data types that pointers are pointing
+    printf("Size of int: %lu\n",sizeof(*p));
+    printf("Size of float: %lu\n",sizeof(*q));
+    printf("Size of double: %lu\n",sizeof(*r));
+    printf("Size of char: %lu\n",sizeof(*ch));
+    return 0;
+}
